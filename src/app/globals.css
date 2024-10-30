@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.grid.w-64.grid-cols-7,
+.grid.w-64.grid-cols-4 {
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.grid.grid-cols-7.mb-1 {
+  display: none;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.flex.justify-between.mb-2 button:first-child {
+  transform: rotate(90deg);
+}
+
+.flex.justify-between.mb-2 button:last-child {
+  transform: rotate(-90deg);
 }
